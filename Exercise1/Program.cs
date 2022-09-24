@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Threading.Channels;
+
 string first = Console.ReadLine();
 string second = Console.ReadLine();
 
@@ -20,10 +22,25 @@ if (firstIsInt && secondIsInt)
 }
 
 
+string s = Console.ReadLine();
+
+bool i = int.TryParse(s, out int x1);
+
+if (i && x1 > 0)
+{
+    Console.WriteLine("number is positive");
+}
+
 int x = 10, y = 20;
-// int tmp = x;
-//
-// x = y;
-// y = tmp;
+
+int tmp = x; //tmp - 10
+x = y; // x- 20 y - 20
+y = tmp; // y- 10
+
 
 Console.WriteLine($"{x} {y}");
+
+double d = 123.65;
+int x2 = (int)d;
+
+Console.WriteLine(x2);
