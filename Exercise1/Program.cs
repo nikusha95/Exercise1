@@ -1,25 +1,26 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using System.Threading.Channels;
+string first = Console.ReadLine();
+string second = Console.ReadLine();
 
-string s = Console.ReadLine();
+bool firstIsInt = int.TryParse(first, out int result1);
+bool secondIsInt = int.TryParse(second, out int result2);
 
-bool isInt = int.TryParse(s, out int result);
-
-//int y = int.Parse(s);
-if (isInt)
+if (firstIsInt && secondIsInt)
 {
-    Console.WriteLine(result);
-}
-else
-{
-    Console.WriteLine("no number");
+    int sum = result1 + result2;
+    Console.WriteLine($"Sum is {sum}");
+
+    int subtract = result1 - result2;
+    Console.WriteLine($"Subtract {subtract} sum is {sum}");
+
+    Console.WriteLine("Subtract {0}, sum is {1}", subtract, sum);
+
+    int multiply = result1 * result2;
 }
 
 
 int x = 10, y = 20;
-
-(x,y)=(y,x);
 // int tmp = x;
 //
 // x = y;
